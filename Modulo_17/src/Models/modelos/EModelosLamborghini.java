@@ -1,0 +1,9 @@
+package Models.modelos;
+
+public enum EModelosLamborghini {
+    LAMBORGHINI_AVENTADOR,
+    LAMBORGHINI_HURACAN,
+    LAMBORGHINI_URUS,
+    LAMBORGHINI_GALLARDO,
+    LAMBORGHINI_DIABLO;
+}
