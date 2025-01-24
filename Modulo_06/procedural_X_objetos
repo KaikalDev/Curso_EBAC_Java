@@ -1,0 +1,8 @@
+A programação procedural: 
+Organiza o código em procedimentos ou funções que executam tarefas específicas, 
+com foco em uma sequência de passos para resolver um problema. 
+
+A programação orientada a objetos (POO): 
+organiza o código em torno de "objetos", que combinam dados (atributos) e comportamentos (métodos). 
+A POO facilita a reutilização de código, encapsulamento e abstração, enquanto a procedural tende a 
+ser mais linear e centrada em funções.
