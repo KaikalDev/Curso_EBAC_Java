@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+  <persistence-unit name="ExemploJPA">
+
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ep-small-fog-a88aofh4-pooler.eastus2.azure.neon.tech/BD_TodoList?sslmode=require" /> <!-- BD Mane -->
+      <property name="javax.persistence.jdbc.user" value="BD_TodoList_owner" /> <!-- DB User -->
+      <property name="javax.persistence.jdbc.password" value="npg_Rrkm20ApFgYI" /> <!-- DB Password -->
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
+      <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+
+      <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+      <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+    </properties>
+
+  </persistence-unit>
+</persistence>
