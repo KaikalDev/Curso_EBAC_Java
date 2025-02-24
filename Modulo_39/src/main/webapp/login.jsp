@@ -9,7 +9,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title>Todo list java</title>
+        <title>To do list java</title>
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/global.css">
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/Forms.css">
     </head>
