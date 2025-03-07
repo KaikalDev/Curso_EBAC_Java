@@ -15,6 +15,11 @@
 </head>
 <body>
     <div class="container">
+
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
+
         <aside class="aside">
             <a class="aside-link button" href="Register.jsp">Register</a>
             <a class="aside-link button" href="login.jsp">Login</a>

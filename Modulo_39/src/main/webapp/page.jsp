@@ -16,11 +16,10 @@
     <link rel="stylesheet" type="text/css" href="css/page.css">
 </head>
     <body>
+        <div class="container">
         <div id="loader">
             <div class="spinner"></div>
         </div>
-
-        <div class="container">
         <jsp:useBean id="WorksSize" scope="request" type="java.lang.Long"/>
         <jsp:useBean id="filterCounts" scope="request" type="java.util.Map"/>
         <jsp:useBean id="Works" scope="request" type="java.util.Collection"/>

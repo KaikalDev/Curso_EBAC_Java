@@ -21,6 +21,9 @@
   <body>
 
     <div class="container">
+      <div id="loader">
+        <div class="spinner"></div>
+      </div>
       <aside class="aside">
         <a class="aside-link button" href="PageServlet?userid=${param.userid}" onclick="iniciarLoader()">Return to task list</a>
       </aside>
