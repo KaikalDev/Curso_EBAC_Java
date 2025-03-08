@@ -50,18 +50,24 @@ public class AddTaskController {
             @RequestParam("options") Optional<String> options
 
     ) {
-        User user = userService.consultar(
-                Long.parseLong(CookiesService.getCookie(request))
-        );
+        User user = userService.consultar(CookiesService.getCookie(request));
         if (user == null) {
             return "redirect:/login";
+        }
+
+        if (title.trim().isEmpty() || description.trim().isEmpty()) {
+            Collection<TaskLevel> leves = TaskLevel.getValues();
+            model.addAttribute("levels", leves);
+            model.addAttribute("NORMAL", TaskLevel.NORMAL);
+            model.addAttribute("errorEmpty", "Title and description are required");
+            return "AddTask";
         }
 
         if (options.isEmpty() || TaskLevel.getByName(options.get()) == null) {
             Collection<TaskLevel> leves = TaskLevel.getValues();
             model.addAttribute("levels", leves);
             model.addAttribute("NORMAL", TaskLevel.NORMAL);
-            model.addAttribute("error", "Is required.");
+            model.addAttribute("errorOption", "Is required.");
             return "AddTask";
         }
 

@@ -35,14 +35,11 @@ public class LoginController {
             @RequestParam("username") String username,
             @RequestParam("password") String password,
             Model model,
-            HttpServletResponse response,
-            HttpServletRequest request) {
-        User userCookie = service.consultar(
-                Long.parseLong(CookiesService.getCookie(request))
-        );
+            HttpServletResponse response) {
 
-        if (userCookie != null) {
-            model.addAttribute("user", userCookie.getUserName());
+        if (username.trim().isEmpty() || password.trim().isEmpty()) {
+            model.addAttribute("errorEmpty", "Username and password are required");
+            return "Login";
         }
 
         if (!service.UserExist(username)) {
